@@ -1,10 +1,12 @@
-
 <html>
 <head>
-  <style> 
+  <style>
     body {
       font-family: Garamond, Garamond, Garamond;
       font-size: 20px;
+      background-color: #f5f5f5;  /* Light background for better contrast */
+      margin: 0;
+      text-align: center;
     }
 
     /* Navbar styling */
@@ -13,11 +15,11 @@
       background-color: #d50032; /* Liverpool FC's red color */
       font-size: 18px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .navbar a {
-      float: left;
-      display: block;
+      display: inline-block;
       color: white;
       text-align: center;
       padding: 14px 20px;
@@ -34,6 +36,7 @@
       color: black;
     }
 
+    /* Back to top button */
     #myBtn {
       display: none;
       position: fixed;
@@ -54,6 +57,7 @@
       background-color: #ff9b86;
     }
 
+    /* Feedback Button */
     .bn5 {
       padding: 0.6em 2em;
       border: none;
@@ -130,40 +134,61 @@
       border-radius: 10px;
     }
 
-    body {
-      text-align: center;
-      background-image: linear-gradient(rgb(254, 254, 254), rgb(255, 0, 0), rgb(255, 255, 255));
-      min-width: 100%;
-      min-height: 100%;
-    }
-
+    /* Main content styling */
     h1 {
       background-image: linear-gradient(rgb(255, 57, 31), rgb(255, 255, 255));
       color: rgb(93, 34, 23);
+      font-size: 4.8vw;
+      padding: 10px;
     }
 
-    /* Smaller footer styling */
+    p {
+      font-size: 1.2em;
+      color: #333;
+      line-height: 1.6;
+      margin: 0 10%;
+    }
+
+    ul {
+      text-align: left;
+      list-style-type: disc;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 400px;
+    }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer styling */
     footer {
-      background-color: #a20a0a;
+      background-color: #c8102e; /* LFC red color */
       color: white;
       text-align: center;
-      padding: 10px 0;  /* Reduced padding */
-      font-size: 14px;  /* Reduced font size */
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
+      padding: 15px 0; /* Increased padding */
+      font-size: 14px; /* Consistent with links */
+      margin-top: 30px;
     }
 
     footer a {
       color: white;
       text-decoration: none;
-      margin: 0 8px; /* Reduced space between links */
-      font-size: 14px; /* Reduced font size */
+      margin: 0 15px; /* Spaced out links */
+      font-size: 14px;
     }
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    footer p {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
 
   </style>
@@ -173,32 +198,32 @@
   <!-- Navbar -->
   <div class="navbar">
     <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#players">Players</a>
-    <a href="#contact">Contact</a>
+    <a href="https://en.wikipedia.org/wiki/Liverpool_F.C." target="_blank">About</a>
+    <a href="https://www.liverpoolfc.com/team/mens" target="_blank">Players</a>
+    <a href="https://www.liverpoolfc.com/info/contact-us" target="_blank">Contact</a>
   </div>
 
-  <marquee><h1 style="font-size:4.8vw">The Best Football Team</h1></marquee>
+  <marquee><h1>The Best Football Team</h1></marquee>
   <br><br>
 
   <a href="https://forms.gle/FZb5uMisHGnDJTEy7" class="bn5">Feedback</a>
   <br><br>
 
   <p>
-    The Liverpool F.C is so awesome, and now I will tell you some cool facts, and more! To get you started, here is the famous logo:
+    Liverpool F.C. is one of the greatest football clubs in the world. Here's the iconic logo to get you started:
   </p>
   <br>
   <br>
 
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8U3p1NItHaHgrBbGwcJOLkY3goLHpNxH1w&amp;s" alt="Liverpool FC Logo" width="155" height="185" border: 5px solid #555; />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8U3p1NItHaHgrBbGwcJOLkY3goLHpNxH1w&amp;s" alt="Liverpool FC Logo" width="155" height="185" />
 
   <br>
   <br>
   <p>
-    Now, let me introduce you to the talented players, and a few extras!
+    Let me introduce you to the talented players of Liverpool F.C.!
   </p>
 
-  <iframe width="360" height="115" src="https://www.youtube.com/embed/buoi-czJW_M?si=8eVmgPlrhl_IUw1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="360" height="115" src="https://www.youtube.com/embed/buoi-czJW_M?si=8eVmgPlrhl_IUw1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
@@ -225,26 +250,24 @@
   </script>
 
   <p>
-    Now, I love this football club for many reasons, but here are a few:
-    <ul> 
-      • The Rich History <br>
-      • The Iconic Players & Their Skill <br>
-      • The Community Values
+    Here are a few reasons why I love Liverpool F.C.:
+    <ul>
+      <li>The Rich History</li>
+      <li>The Iconic Players & Their Skills</li>
+      <li>The Strong Community Values</li>
     </ul>
   </p>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
-  <!-- Footer with social media links -->
+  <!-- Footer -->
   <footer>
     <p>Follow Liverpool FC on:</p>
     <a href="https://www.facebook.com/LiverpoolFC/" target="_blank">Facebook</a>
     <a href="https://www.instagram.com/liverpoolfc/?hl=en" target="_blank">Instagram</a>
-    <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">X (formerly Twitter)</a>
+    <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">X (formerly Twitter)</a><br><br>
+
+    <a href="https://en.wikipedia.org/wiki/Liverpool_F.C." target="_blank">About</a>
+    <a href="https://www.liverpoolfc.com/team/mens" target="_blank">Players</a>
+    <a href="https://www.liverpoolfc.com/info/contact-us" target="_blank">Contact</a>
   </footer>
 </body>
 </html>
