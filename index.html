@@ -1,189 +1,249 @@
-
-
 <html>
 <head>
   <style> 
-body {
-  font-family:  Garamond ,Garamond  , Garamond;
-  font-size: 20px;
-}
+    body {
+      font-family: Garamond, Garamond, Garamond;
+      font-size: 20px;
+    }
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color:rgb(173, 12, 12);
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
+    /* Navbar styling */
+    .navbar {
+      overflow: hidden;
+      background-color: #d50032; /* Liverpool FC's red color */
+      font-size: 18px;
+      text-align: center;
+    }
 
-#myBtn:hover {
-  background-color: #ff9b86;
-}
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ff9b86;
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: #ff9b86;
+      color: black;
+    }
+
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: rgb(173, 12, 12);
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: #ff9b86;
+    }
+
     .bn5 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(255, 255, 255);
-  background: rgb(173, 12, 12) ;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-}
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: rgb(173, 12, 12);
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
 
-.bn5:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowingbn5 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
+    .bn5:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowingbn5 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
 
-@keyframes glowingbn5 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.bn5:active {
-  color: #000;
-}
-
-.bn5:active:after {
-  background: transparent;
-}
-
-.bn5:hover:before {
-  opacity: 1;
-}
-
-.bn5:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #191919;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-   
-     body{
-         text-align: center;
-         background-image: linear-gradient( rgb(254, 254, 254 ), rgb(255,0,0), rgb(255,255,255));
-         min-width: 100%;
-         min-height: 100%;
+    @keyframes glowingbn5 {
+      0% {
+        background-position: 0 0;
       }
-      
-      h1{
-         background-image: linear-gradient(rgb(255, 57, 31),rgb(255,255,255));
-         color: rgb(93,34,23);
+      50% {
+        background-position: 400% 0;
       }
-      
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .bn5:active {
+      color: #000;
+    }
+
+    .bn5:active:after {
+      background: transparent;
+    }
+
+    .bn5:hover:before {
+      opacity: 1;
+    }
+
+    .bn5:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #191919;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    body {
+      text-align: center;
+      background-image: linear-gradient(rgb(254, 254, 254), rgb(255, 0, 0), rgb(255, 255, 255));
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    h1 {
+      background-image: linear-gradient(rgb(255, 57, 31), rgb(255, 255, 255));
+      color: rgb(93, 34, 23);
+    }
+
+    /* Smaller footer styling */
+    footer {
+      background-color: #a20a0a;
+      color: white;
+      text-align: center;
+      padding: 10px 0;  /* Reduced padding */
+      font-size: 14px;  /* Reduced font size */
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px; /* Reduced space between links */
+      font-size: 14px; /* Reduced font size */
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
 <body>
- 
-<marquee><h1 style="font-size:4.8vw">The Best Football Team</h1></marquee>
-                                   <br><br>
-  
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#players">Players</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <marquee><h1 style="font-size:4.8vw">The Best Football Team</h1></marquee>
+  <br><br>
+
   <a href="https://forms.gle/FZb5uMisHGnDJTEy7" class="bn5">Feedback</a>
-<br><br>
+  <br><br>
 
+  <p>
+    The Liverpool F.C is so awesome, and now I will tell you some cool facts, and more! To get you started, here is the famous logo:
+  </p>
+  <br>
+  <br>
 
-</body>
-<p>
- The Liverpool F.C is so awesome, and now I will tell you some cool facts, and more! To get you started, here is the famous logo:
-</p>
-<br>
-<br>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8U3p1NItHaHgrBbGwcJOLkY3goLHpNxH1w&amp;s" alt="Liverpool FC Logo" width="155" height="185" border: 5px solid #555; />
 
-  
-  
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8U3p1NItHaHgrBbGwcJOLkY3goLHpNxH1w&amp;s" alt="Liverpool FC Logo " width="155" height="185" border: 5px solid #555; />
+  <br>
+  <br>
+  <p>
+    Now, let me introduce you to the talented players, and a few extras!
+  </p>
 
-<br>
-<br>
-<p>
-Now, let me introduce you to the talented players, and a few extras!
+  <iframe width="360" height="115" src="https://www.youtube.com/embed/buoi-czJW_M?si=8eVmgPlrhl_IUw1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-  
-</p>
-  
-
-
-
-  
-
-<iframe width="360" height="115" src="https://www.youtube.com/embed/buoi-czJW_M?si=8eVmgPlrhl_IUw1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   <script>
-// Get the button
-let mybutton = document.getElementById("myBtn");
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
+  <p>
+    Now, I love this football club for many reasons, but here are a few:
+    <ul> 
+      • The Rich History <br>
+      • The Iconic Players & Their Skill <br>
+      • The Community Values
+    </ul>
+  </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Footer with social media links -->
+  <footer>
+    <p>Follow Liverpool FC on:</p>
+    <a href="https://www.facebook.com/LiverpoolFC/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/liverpoolfc/?hl=en" target="_blank">Instagram</a>
+    <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">X (formerly Twitter)</a>
+  </footer>
 </body>
-<p>
-Now, I love this football club for many reasons, but here are a few:
-  <ul> • The Rich History <br>
-  • The Iconic Players & Their Skill <br>
-  • The Community Values</ul>
-</p>
-<br>
-<br>
-
+</html>
